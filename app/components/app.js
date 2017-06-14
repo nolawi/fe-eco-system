@@ -1,12 +1,11 @@
-let React = require('react');
-let Popularity = require('./popular')
-
+var React = require('react');
+var Popular = require('./popular');
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-      	<Popularity />
+      <div className='container'>
+        <Popular />
       </div>
     )
   }
