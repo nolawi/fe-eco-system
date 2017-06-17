@@ -1,19 +1,37 @@
-
 var React = require('react');
 var NavLink = require('react-router-dom').NavLink;
 
 function Nav () {
   return (
     <ul className='nav'>
+      <li> 
+          <a class="nav-item">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+    </li>
+          <li> 
+          <a class="nav-item">
+          <span class="icon">
+            <i class="fa fa-github"></i>
+          </span>
+        </a>
+    </li>
+    
+    
       <li>
-        <NavLink exact activeClassName='active' to='/'>Home</NavLink>
+        <NavLink  exact activeClassName='active' to='/'>Home</NavLink>
+
       </li>
-      <li>
+       <li>
         <NavLink activeClassName='active' to='/about'>About</NavLink>
       </li>
-     
     </ul>
   )
 }
 
 module.exports = Nav;
+
+
+  
