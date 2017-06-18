@@ -10,11 +10,12 @@ function SelectLanguage (props) {
     <ul className='languages'>
       {languages.map(function (lang) {
         return (
-          <li
+    
+          <li className="pure-menu-item"
             style={lang === props.selectedLanguage ? {color: '#d0021b'} : null}
             onClick={props.onSelect.bind(null, lang)}
             key={lang}>
-              {lang}
+              <a  className="pure-menu-link">{lang}</a>
           </li>
         )
       })}
@@ -91,9 +92,15 @@ class Popular extends React.Component {
     return (
       <div>
          <h1>The Front End Eco-System</h1>
+
+          <div className="pure-menu pure-menu-horizontal pure-menu-scrollable">
+         
+          <ul className="pure-menu-list">
         <SelectLanguage
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage} />
+          </ul>
+          </div>
         {!this.state.repos
           ? <p>LOADING!</p>
           : <RepoGrid repos={this.state.repos} />}
